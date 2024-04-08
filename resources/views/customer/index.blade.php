@@ -7,7 +7,7 @@
     <meta name="description" content="BarberShop & Hair Salon HTML Template">
     <meta name="author" content="">
     <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png')}}">
 
     <link rel="stylesheet" href=" {{ asset('css/elegant-font-icons.css')}}">
 
@@ -41,13 +41,13 @@
         <![endif]-->
     <div id='preloader'>
         <div class='loader'>
-            <img src="img/loading.gif" width="80" alt="">
+            <img src="{{ asset('img/loading.gif')}}" width="80" alt="">
         </div>
     </div>
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                <a href="#" class="navbar-brand"><img src="{{ asset('img/logo.png')}}" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -100,7 +100,7 @@
     </header>
     <section class="slider_section">
         <ul id="main-slider" class="owl-carousel main_slider">
-            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-1.jpg);">
+            <li class="main_slide d-flex align-items-center" style="background-image: {{ asset('img/slide-1.jpg')}};">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Its Not Just a Haircut, Its an Experience.</h3>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </li>
-            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-2.jpg);">
+            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-2.jpg')}});">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Classic Hair Style & Shaves.</h3>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </li>
-            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-3.jpg);">
+            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-3.jpg')}});">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Its Not Just a Haircut, Its an Experience.</h3>
@@ -145,7 +145,7 @@
                     <div class="about_content align-center">
                         <h3 class="wow fadeInUp" data-wow-delay="100ms">Introducing</h3>
                         <h2 class="wow fadeInUp" data-wow-delay="200ms">Salon@Door <br>Since 2023</h2>
-                        <img class="wow fadeInUp" data-wow-delay="500ms" src="img/about-logo.png" alt="logo">
+                        <img class="wow fadeInUp" data-wow-delay="500ms" src="{{asset('img/about-logo.png')}}" alt="logo">
                         <p class="wow fadeInUp" data-wow-delay="600ms">Barber is a person whose occupation is mainly to
                             cut dress groom style and shave men's and boys' hair. A barber's place of work is known as a
                             "barbershop" or a "barber's". Barbershops are also places of social interaction and public
@@ -155,11 +155,11 @@
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="about_img">
-                        <img src="img/about-1.jpg" alt="idea-images" class="about_img_1 wow fadeInLeft"
+                        <img src="{{ asset('img/about-1.jpg')}}" alt="idea-images" class="about_img_1 wow fadeInLeft"
                             data-wow-delay="200ms">
-                        <img src="img/about-2.jpg" alt="idea-images" class="about_img_2 wow fadeInRight"
+                        <img src="{{ asset('img/about-2.jpg')}}" alt="idea-images" class="about_img_2 wow fadeInRight"
                             data-wow-delay="400ms">
-                        <img src="img/about-3.jpg" alt="idea-images" class="about_img_3 wow fadeInLeft"
+                        <img src="{{ asset('img/about-3.jpg')}}" alt="idea-images" class="about_img_3 wow fadeInLeft"
                             data-wow-delay="600ms">
                     </div>
                 </div>
@@ -211,8 +211,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-6">
-                    <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
-                        id="appointment_form" class="form-horizontal appointment_form">
+                    <form  class="form-horizontal appointment_form" method="post" action="{{route('customer.store')}}">
+                        @csrf
+                        @method('post')
+                       
                         <div class="book_content">
                             <h2>Make an appointment</h2>
                             <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
@@ -220,48 +222,54 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 padding-10">
-                                <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
+                                <input type="text" id="app_name" name="name" class="form-control" placeholder="Name"
                                     required>
                             </div>
                             <div class="col-md-6 padding-10">
-                                <input type="email" id="app_email" name="app_email" class="form-control"
+                                <input type="email" id="app_email" name="email" class="form-control"
                                     placeholder="Your Email" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 padding-10">
-                                <input type="text" id="app_phone" name="app_phone" class="form-control"
+                                <input type="text" id="app_phone" name="phone_no" class="form-control"
                                     placeholder="Your Phone No" required>
                             </div>
                             <div class="col-md-6 padding-10">
-                                <input type="text" id="app_free_time" name="app_free_time" class="form-control"
+                                <input type="text" id="app_free_time" name="time" class="form-control"
                                     placeholder="Your Free Time" required>
+                            </div>
+                            <div class="col-md-6 padding-10">
+                                <input type="text" id="app_free_date" name="date" class="form-control"
+                                    placeholder="Your Free day" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 padding-10">
-                                <select class="form-control" id="app_services" name="app_services">
-                                    <option>Services</option>
-                                    <option>Hair Styling</option>
-                                    <option>Shaving</option>
-                                    <option>Face Mask</option>
-                                    <option>Hair Wash</option>
-                                    <option>Beard Triming</option>
+                                <select class="form-control" id="app_services" name="service">
+                                    <option value="">Services</option>
+                                    <option value="hair_styling">Hair Styling</option>
+                                    <option value="shaving">Shaving</option>
+                                    <option value="face_mask">Face Mask</option>
+                                    <option value="hair_wash">Hair Wash</option>
+                                    <option value="beard_trim">Beard Trimming</option>
                                 </select>
+                                
                             </div>
                             <div class="col-md-6 padding-10">
                                 <select class="form-control" id="app_barbers" name="app_barbers">
-                                    <option>Choose Barbers</option>
-                                    <option>Michel Brown</option>
-                                    <option>Jonathan Smith</option>
-                                    <option>Jack Tosan</option>
-                                    <option>Martin Lane</option>
+                                    <option value="">Choose Barbers</option>
+                                    <option value="michel_brown">Michel Brown</option>
+                                    <option value="jonathan_smith">Jonathan Smith</option>
+                                    <option value="jack_tosan">Jack Tosan</option>
+                                    <option value="martin_lane">Martin Lane</option>
                                 </select>
+                                
                             </div>
                         </div>
-                        <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
+                        <button  class="default_btn" type="submit" >Make Appointment</button>
 
-                        <div id="msg-status" class="alert" role="alert"></div>
+                        <div class="alert" role="alert"></div>
                     </form>
                 </div>
             </div>
@@ -277,7 +285,7 @@
             <ul class="team_members row">
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
                     <div class="team_member">
-                        <img src="img/team-1.jpg" alt="Team Member">
+                        <img src="{{ asset('img/team-1.jpg')}}" alt="Team Member">
                         <div class="overlay">
                             <h3>Kyle Frederick</h3>
                             <p>hair cutting</p>
@@ -286,7 +294,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                     <div class="team_member">
-                        <img src="img/team-2.jpg" alt="Team Member">
+                        <img src="{{ asset('img/team-2.jpg')}}" alt="Team Member">
                         <div class="overlay">
                             <h3>José Carpio</h3>
                             <p>pedicure</p>
@@ -295,7 +303,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                     <div class="team_member">
-                        <img src="img/team-3.jpg" alt="Team Member">
+                        <img src="{{ asset('img/team-3.jpg')}}" alt="Team Member">
                         <div class="overlay">
                             <h3>Michel Ibáñez</h3>
                             <p>face masking</p>
@@ -304,7 +312,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
                     <div class="team_member">
-                        <img src="img/team-4.jpg" alt="Team Member">
+                        <img src="{{ asset('img/team-4.jpg')}}" alt="Team Member">
                         <div class="overlay">
                             <h3>Adam Castellon</h3>
                             <p>hair coloring</p>
@@ -524,7 +532,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="img/post-1.jpg" alt="post">
+                            <img src="{{ asset('img/post-1.jpg')}}" alt="post">
                             <span class="category"><a href="#">interior</a></span>
                         </div>
                         <div class="blog-content">
@@ -538,7 +546,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="img/post-2.jpg" alt="post">
+                            <img src="{{ asset('img/post-2.jpg')}}" alt="post">
                             <span class="category"><a href="#">Architecture</a></span>
                         </div>
                         <div class="blog-content">
@@ -552,7 +560,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="img/post-3.jpg" alt="post">
+                            <img src="{{ asset('img/post-3.jpg')}}" alt="post">
                             <span class="category"><a href="#">Design</a></span>
                         </div>
                         <div class="blog-content">
@@ -570,28 +578,28 @@
         <div class="container">
             <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
                 <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-4.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-4.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-5.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-5.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png')}}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png')}}" alt="sponsor-image">
                 </li>
             </ul>
         </div>
@@ -601,7 +609,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo.png" alt="Brand">
+                        <img class="mb-15" src="img/logo.png')}}" alt="Brand">
                         <p>Our barbershop is created for men who appreciate premium quality, time and flawless look.                        </p>
                         <ul class="widget_social">
                             <li><a href="#"><i class="social_facebook"></i></a></li>

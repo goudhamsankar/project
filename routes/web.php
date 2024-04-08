@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('index', [CustomerController::class, 'index'])->name('customer.index');
+Route::post('store', [CustomerController::class, 'store'])->name('customer.store');
