@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 /*
@@ -12,9 +13,28 @@ use App\Http\Controllers\CustomerController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('customer.index');
 });
+
+Route::get('/dashboard', function () {
+    return to_route('customer.index');
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resource('customer', CustomerController::class);
+
+});
+
+
+
+
 Route::get('index', [CustomerController::class, 'index'])->name('customer.index');
 Route::post('store', [CustomerController::class, 'store'])->name('customer.store');
+require __DIR__.'/auth.php';
