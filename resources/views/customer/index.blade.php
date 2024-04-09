@@ -1,137 +1,41 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="BarberShop & Hair Salon HTML Template">
-    <meta name="author" content="">
-    <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png')}}">
-
-    <link rel="stylesheet" href=" {{ asset('css/elegant-font-icons.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/elegant-line-icons.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/themify-icons.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/barber-icons.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('css/venobox/venobox.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/nice-select.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/slicknav.min.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
-
-    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-    <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
-</head>
-
-<body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div id='preloader'>
-        <div class='loader'>
-            <img src="{{ asset('img/loading.gif')}}" width="80" alt="">
-        </div>
-    </div>
-    <header id="header" class="header-section">
-        <div class="container">
-            <nav class="navbar ">
-                <a href="#" class="navbar-brand"><img src="{{ asset('img/logo.png')}}" alt="Barbershop"></a>
-                <div class="d-flex menu-wrap align-items-center">
-                    <div id="mainmenu" class="mainmenu">
-                        <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="index-2.html">Home<span
-                                        class="sr-only">(current)</span></a>
-                                <ul>
-                                    <li><a href="index-2.html">Home Default</a></li>
-                                    <li><a href="index-3.html">Home Modern</a></li>
-                                    <li><a href="index-4.html">Home Classic</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about-us.html">About</a>
-                                <ul>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="about-company.html">About Company</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="services.html">Services</a>
-                                <ul>
-                                    <li><a href="services.html">Services 01</a></li>
-                                    <li><a href="services-2.html">Services 02</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="appointment.html">Appointment</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="team.html">Our Team</a></li>
-                                    <li><a href="pricing.html">Our Pricing</a></li>
-                                    <li><a href="404.html">404 Error</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                                    <li><a href="blog-classic.html">Blog Classic</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-btn">
-                        <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
-
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+@extends('layouts.customer')
+@section('content')
     <section class="slider_section">
         <ul id="main-slider" class="owl-carousel main_slider">
-            <li class="main_slide d-flex align-items-center" style="background-image: {{ asset('img/slide-1.jpg')}};">
+            <li class="main_slide d-flex align-items-center" style="background-image: url('{{ asset('img/slide-1.jpg') }}');">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Its Not Just a Haircut, Its an Experience.</h3>
                         <h1>Being a barber is about <br>taking care of the people.</h1>
                         <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality,
                             time and flawless look.</p>
-                            <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
+                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
 
                     </div>
                 </div>
             </li>
-            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-2.jpg')}});">
+            <li class="main_slide d-flex align-items-center"
+                style="background-image: url('{{ asset('img/slide-2.jpg') }}');">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Classic Hair Style & Shaves.</h3>
                         <h1>Our hair styles<br>enhances your smile.</h1>
                         <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality,
                             time and flawless look.</p>
-                            <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
+                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
 
                     </div>
                 </div>
             </li>
-            <li class="main_slide d-flex align-items-center" style="background-image: url(img/slide-3.jpg')}});">
+            <li class="main_slide d-flex align-items-center"
+                style="background-image: url('{{ asset('img/slide-3.jpg') }}');">
                 <div class="container">
                     <div class="slider_content">
                         <h3>Its Not Just a Haircut, Its an Experience.</h3>
                         <h1>Where mens want <br>to look there very best.</h1>
                         <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality,
                             time and flawless look.</p>
-                            <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
+                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
 
                     </div>
                 </div>
@@ -145,7 +49,8 @@
                     <div class="about_content align-center">
                         <h3 class="wow fadeInUp" data-wow-delay="100ms">Introducing</h3>
                         <h2 class="wow fadeInUp" data-wow-delay="200ms">Salon@Door <br>Since 2023</h2>
-                        <img class="wow fadeInUp" data-wow-delay="500ms" src="{{asset('img/about-logo.png')}}" alt="logo">
+                        <img class="wow fadeInUp" data-wow-delay="500ms" src="{{ asset('img/about-logo.png') }}"
+                            alt="logo">
                         <p class="wow fadeInUp" data-wow-delay="600ms">Barber is a person whose occupation is mainly to
                             cut dress groom style and shave men's and boys' hair. A barber's place of work is known as a
                             "barbershop" or a "barber's". Barbershops are also places of social interaction and public
@@ -155,11 +60,11 @@
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <div class="about_img">
-                        <img src="{{ asset('img/about-1.jpg')}}" alt="idea-images" class="about_img_1 wow fadeInLeft"
+                        <img src="{{ asset('img/about-1.jpg') }}" alt="idea-images" class="about_img_1 wow fadeInLeft"
                             data-wow-delay="200ms">
-                        <img src="{{ asset('img/about-2.jpg')}}" alt="idea-images" class="about_img_2 wow fadeInRight"
+                        <img src="{{ asset('img/about-2.jpg') }}" alt="idea-images" class="about_img_2 wow fadeInRight"
                             data-wow-delay="400ms">
-                        <img src="{{ asset('img/about-3.jpg')}}" alt="idea-images" class="about_img_3 wow fadeInLeft"
+                        <img src="{{ asset('img/about-3.jpg') }}" alt="idea-images" class="about_img_3 wow fadeInLeft"
                             data-wow-delay="600ms">
                     </div>
                 </div>
@@ -211,10 +116,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-6">
-                    <form  class="form-horizontal appointment_form" method="post" action="{{route('customer.store')}}">
+                    <form class="form-horizontal appointment_form" method="post" action="{{ route('customer.store') }}">
                         @csrf
                         @method('post')
-                       
+
                         <div class="book_content">
                             <h2>Make an appointment</h2>
                             <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
@@ -236,11 +141,11 @@
                                     placeholder="Your Phone No" required>
                             </div>
                             <div class="col-md-6 padding-10">
-                                <input type="text" id="app_free_time" name="time" class="form-control"
+                                <input type="time" id="app_free_time" name="time" class="form-control"
                                     placeholder="Your Free Time" required>
                             </div>
                             <div class="col-md-6 padding-10">
-                                <input type="text" id="app_free_date" name="date" class="form-control"
+                                <input type="date" id="app_free_date" name="date" class="form-control"
                                     placeholder="Your Free day" required>
                             </div>
                         </div>
@@ -254,20 +159,20 @@
                                     <option value="hair_wash">Hair Wash</option>
                                     <option value="beard_trim">Beard Trimming</option>
                                 </select>
-                                
+
                             </div>
                             <div class="col-md-6 padding-10">
-                                <select class="form-control" id="app_barbers" name="app_barbers">
+                                <select class="form-control" id="app_barbers" name="barber">
                                     <option value="">Choose Barbers</option>
                                     <option value="michel_brown">Michel Brown</option>
                                     <option value="jonathan_smith">Jonathan Smith</option>
                                     <option value="jack_tosan">Jack Tosan</option>
                                     <option value="martin_lane">Martin Lane</option>
                                 </select>
-                                
+
                             </div>
                         </div>
-                        <button  class="default_btn" type="submit" >Make Appointment</button>
+                        <button class="default_btn" type="submit">Make Appointment</button>
 
                         <div class="alert" role="alert"></div>
                     </form>
@@ -285,7 +190,7 @@
             <ul class="team_members row">
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
                     <div class="team_member">
-                        <img src="{{ asset('img/team-1.jpg')}}" alt="Team Member">
+                        <img src="{{ asset('img/team-1.jpg') }}" alt="Team Member">
                         <div class="overlay">
                             <h3>Kyle Frederick</h3>
                             <p>hair cutting</p>
@@ -294,7 +199,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                     <div class="team_member">
-                        <img src="{{ asset('img/team-2.jpg')}}" alt="Team Member">
+                        <img src="{{ asset('img/team-2.jpg') }}" alt="Team Member">
                         <div class="overlay">
                             <h3>José Carpio</h3>
                             <p>pedicure</p>
@@ -303,7 +208,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                     <div class="team_member">
-                        <img src="{{ asset('img/team-3.jpg')}}" alt="Team Member">
+                        <img src="{{ asset('img/team-3.jpg') }}" alt="Team Member">
                         <div class="overlay">
                             <h3>Michel Ibáñez</h3>
                             <p>face masking</p>
@@ -312,7 +217,7 @@
                 </li>
                 <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
                     <div class="team_member">
-                        <img src="{{ asset('img/team-4.jpg')}}" alt="Team Member">
+                        <img src="{{ asset('img/team-4.jpg') }}" alt="Team Member">
                         <div class="overlay">
                             <h3>Adam Castellon</h3>
                             <p>hair coloring</p>
@@ -335,7 +240,7 @@
                     <p>"At our salon, we don't just style hair, we craft experiences.<br>
                         Every appointment is an opportunity to enhance your natural beauty.<br>
                         Join us and discover the art of self-expression through our expert touch."
-                        </p>
+                    </p>
                     <h4 class="text-white">salon@door.</h4>
                 </li>
                 <li class="testimonial_item">
@@ -361,19 +266,22 @@
                         <ul class="price_list">
                             <li>
                                 <h4>Hair Cut</h4>
-                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your look and boosting your confidence.
+                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your
+                                    look and boosting your confidence.
                                 </p>
                                 <span class="price">₹249</span>
                             </li>
                             <li>
                                 <h4>Hair Styling</h4>
-                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your look and boosting your confidence.
+                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your
+                                    look and boosting your confidence.
                                 </p>
                                 <span class="price">₹349</span>
                             </li>
                             <li>
                                 <h4>Hair Triming</h4>
-                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your look and boosting your confidence.
+                                <p>A great haircut is the perfect accessory for every occasion, effortlessly elevating your
+                                    look and boosting your confidence.
                                 </p>
                                 <span class="price">₹279</span>
                             </li>
@@ -382,19 +290,22 @@
                         <ul class="price_list">
                             <li>
                                 <h4>Classic Pedicure</h4>
-                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of pampering that leaves you walking on air."
+                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of
+                                    pampering that leaves you walking on air."
                                 </p>
                                 <span class="price">₹499</span>
                             </li>
                             <li>
                                 <h4>Spa Pedicure</h4>
-                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of pampering that leaves you walking on air."
+                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of
+                                    pampering that leaves you walking on air."
                                 </p>
                                 <span class="price">₹699</span>
                             </li>
                             <li>
                                 <h4>Gel Pedicure</h4>
-                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of pampering that leaves you walking on air."
+                                <p>"Pedicures are a treat for the feet, offering relaxation, rejuvenation, and a touch of
+                                    pampering that leaves you walking on air."
                                 </p>
                                 <span class="price">₹649</span>
                             </li>
@@ -436,19 +347,22 @@
                         <ul class="price_list">
                             <li>
                                 <h4>Swedish Massage</h4>
-                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a soothing touch that relaxes both the body and the mind.
+                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a
+                                    soothing touch that relaxes both the body and the mind.
                                 </p>
                                 <span class="price">₹799</span>
                             </li>
                             <li>
                                 <h4>Deep Tissue Massage</h4>
-                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a soothing touch that relaxes both the body and the mind.
+                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a
+                                    soothing touch that relaxes both the body and the mind.
                                 </p>
                                 <span class="price">₹1999</span>
                             </li>
                             <li>
                                 <h4>Hot Stone Massage</h4>
-                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a soothing touch that relaxes both the body and the mind.
+                                <p>Massage therapy is a blissful escape from the stresses of everyday life, offering a
+                                    soothing touch that relaxes both the body and the mind.
                                 </p>
                                 <span class="price">₹1499</span>
                             </li>
@@ -461,19 +375,22 @@
                         <ul class="price_list">
                             <li>
                                 <h4>White Facial</h4>
-                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and glowing!"
+                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and
+                                    glowing!"
                                 </p>
                                 <span class="price">₹199</span>
                             </li>
                             <li>
                                 <h4>Face Cleaning</h4>
-                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and glowing!"
+                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and
+                                    glowing!"
                                 </p>
                                 <span class="price">₹199</span>
                             </li>
                             <li>
                                 <h4>Bright Tuning</h4>
-                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and glowing!"
+                                <p>"Face masking is a refreshing treat for the skin, leaving it feeling rejuvenated and
+                                    glowing!"
                                     <br>
                                     <br>
                                     <br>
@@ -516,7 +433,7 @@
                         <h2>Making You Look Good <br> Is In Our Heritage.</h2>
                         <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
                             and boys hair.</p>
-                            <button id="app_submit" class="default_btn" type="submit" onclick="location.href='pricing.html'">Make Appointment</button>
+                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
                     </div>
                 </div>
             </div>
@@ -532,7 +449,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="{{ asset('img/post-1.jpg')}}" alt="post">
+                            <img src="{{ asset('img/post-1.jpg') }}" alt="post">
                             <span class="category"><a href="#">interior</a></span>
                         </div>
                         <div class="blog-content">
@@ -546,7 +463,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="{{ asset('img/post-2.jpg')}}" alt="post">
+                            <img src="{{ asset('img/post-2.jpg') }}" alt="post">
                             <span class="category"><a href="#">Architecture</a></span>
                         </div>
                         <div class="blog-content">
@@ -560,7 +477,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                     <div class="blog-item">
                         <div class="blog-thumb">
-                            <img src="{{ asset('img/post-3.jpg')}}" alt="post">
+                            <img src="{{ asset('img/post-3.jpg') }}" alt="post">
                             <span class="category"><a href="#">Design</a></span>
                         </div>
                         <div class="blog-content">
@@ -578,28 +495,28 @@
         <div class="container">
             <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-1.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-2.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-3.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-4.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-4.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-5.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-5.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-1.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-2.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="{{ asset('img/sponsor-3.png')}}" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png') }}" alt="sponsor-image">
                 </li>
             </ul>
         </div>
@@ -610,7 +527,7 @@
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
                         <img class="mb-15" src="img/logo.png')}}" alt="Brand">
-                        <p>Our barbershop is created for men who appreciate premium quality, time and flawless look.                        </p>
+                        <p>Our barbershop is created for men who appreciate premium quality, time and flawless look. </p>
                         <ul class="widget_social">
                             <li><a href="#"><i class="social_facebook"></i></a></li>
                             <li><a href="#"><i class="social_twitter"></i></a></li>
@@ -626,11 +543,11 @@
                         <p>123, Brigade Road,
                             Bangalore - 560001,
                             Karnataka, India.</p>
-                            <h3>E-mail US</h3>
-                            <p>salonatdoor@gmail.com</p>
-                                <br>
-                                <h3>Toll-free number</h3>
-                                <p>+(91) 98 7654 3210</p>
+                        <h3>E-mail US</h3>
+                        <p>salonatdoor@gmail.com</p>
+                        <br>
+                        <h3>Toll-free number</h3>
+                        <p>+(91) 98 7654 3210</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 sm-padding">
@@ -651,7 +568,8 @@
                             <form action="#" class="subscribe_form">
                                 <input type="email" name="email" id="subs-email" class="form_input"
                                     placeholder="Email Address...">
-                                    <button type="submit" class="submit" onclick="location.href='subscribed.html'">SUBSCRIBE</button>
+                                <button type="submit" class="submit"
+                                    onclick="location.href='subscribed.html'">SUBSCRIBE</button>
                                 <div class="clearfix"></div>
                                 <div id="subscribe-result">
                                     <p class="subscription-success"></p>
@@ -669,8 +587,10 @@
             <div class="row">
                 <div class="col-md-6 xs-padding">
                     <div class="copyright">&copy;
-                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> Barber Shop
-                        
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear())
+                        </script> Barber Shop
+
                     </div>
                 </div>
                 <div class="col-md-6 xs-padding">
@@ -683,38 +603,4 @@
             </div>
         </div>
     </footer>
-    <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
-
-    <script src="{{ asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/bootstrap.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/imagesloaded.pkgd.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/owl.carousel.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/jquery.isotope.v3.0.2.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/smooth-scroll.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/venobox.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/jquery.ajaxchimp.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/jquery.slicknav.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/jquery.nice-select.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/jquery.mb.YTPlayer.min.js')}}"></script>
-
-    <script src="{{ asset('js/vendor/wow.min.js')}}"></script>
-
-    <script src="{{ asset('js/contact.js')}}"></script>
-
-    <script src="{{ asset('js/appointment.js')}}"></script>
-
-    <script src="{{ asset('js/main.js')}}"></script>
-</body>
-
-
-</html>
+@endsection

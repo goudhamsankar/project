@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string("time")->nullable();
             $table->string("service")->nullable();
             $table->string("barber")->nullable();
-            $table->string("status")->nullable();
+            $table->string("status")->default('1')->nullable();
+            $table->string("amount")->default('0')->nullable();
             $table->string("date")->nullable();
             $table->timestamps();
         });

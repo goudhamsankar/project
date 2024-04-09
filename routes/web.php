@@ -31,10 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('customer', CustomerController::class);
 
 });
-
-
-
-
-Route::get('index', [CustomerController::class, 'index'])->name('customer.index');
 Route::post('store', [CustomerController::class, 'store'])->name('customer.store');
+Route::get('check', [CustomerController::class, 'check'])->name('customer.check');
+Route::post('check-slote', [CustomerController::class, 'checkSlote'])->name('customer.checkSlote');
 require __DIR__.'/auth.php';
