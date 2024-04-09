@@ -56,6 +56,11 @@ class CustomerController extends Controller
     public function checkSlote(Request $request)
     {
         $data = customer::where('email', $request->email)->where('status', 0)->first();
+        if($data == null){
+            $data = new customer(); // Create a new customer instance
+            $data->name = "No appointment found";
+        }
+        // dd($data);
         return view('customer.check-appointment', compact('data'));
     }
     /**
