@@ -37,4 +37,5 @@ Route::post('check-slote', [CustomerController::class, 'checkSlote'])->name('cus
 Route::get('about', [CustomerController::class, 'about'])->name('customer.about');
 Route::get('services', [CustomerController::class, 'services'])->name('customer.services');
 Route::get('contact', [CustomerController::class, 'contact'])->name('customer.contact');
+Route::get('gallery', [CustomerController::class, 'gallery'])->name('customer.gallery');
 require __DIR__.'/auth.php';

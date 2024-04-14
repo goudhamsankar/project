@@ -53,6 +53,8 @@
                             </li>
                             <li><a href="{{ route('customer.about') }}">About</a>
                             </li>
+                            <li><a href="{{ route('customer.gallery') }}">Gallery</a>
+                            </li>
                             <li><a href="{{ route('customer.services') }}">Services</a>
                             </li>
                             <li><a href="{{ route('customer.contact') }}">Contact</a>

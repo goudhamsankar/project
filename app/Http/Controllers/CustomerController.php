@@ -83,4 +83,8 @@ class CustomerController extends Controller
     {
       return view('customer.contact');
     }
+    public function gallery()
+    {
+      return view('customer.gallery');
+    }
 }
