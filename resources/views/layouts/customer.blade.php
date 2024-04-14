@@ -51,11 +51,12 @@
                             <li><a data-scroll class="nav-link active" href="{{ url('/') }}">Home<span
                                         class="sr-only">(current)</span></a>
                             </li>
-                            <li><a href="about-us.html">About</a>
+                            <li><a href="{{ route('customer.about') }}">About</a>
                             </li>
-                            <li><a href="services.html">Services</a>
+                            <li><a href="{{ route('customer.services') }}">Services</a>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ route('customer.contact') }}">Contact</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="header-btn">

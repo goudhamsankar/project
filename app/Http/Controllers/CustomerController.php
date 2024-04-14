@@ -71,4 +71,16 @@ class CustomerController extends Controller
         $customer->delete();
         return redirect()->route('customer.index');
     }
+    public function about()
+    {
+      return view('customer.about-us');
+    }
+    public function services()
+    {
+      return view('customer.services-2');
+    }
+    public function contact()
+    {
+      return view('customer.contact');
+    }
 }

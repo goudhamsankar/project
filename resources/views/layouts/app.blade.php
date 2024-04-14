@@ -34,5 +34,4 @@
         </div>
     </body>
     <script src="https://kit.fontawesome.com/5650dca2fd.js" crossorigin="anonymous"></script>
-
 </html>

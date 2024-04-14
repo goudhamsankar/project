@@ -34,4 +34,7 @@ Route::middleware('auth')->group(function () {
 Route::post('store', [CustomerController::class, 'store'])->name('customer.store');
 Route::get('check', [CustomerController::class, 'check'])->name('customer.check');
 Route::post('check-slote', [CustomerController::class, 'checkSlote'])->name('customer.checkSlote');
+Route::get('about', [CustomerController::class, 'about'])->name('customer.about');
+Route::get('services', [CustomerController::class, 'services'])->name('customer.services');
+Route::get('contact', [CustomerController::class, 'contact'])->name('customer.contact');
 require __DIR__.'/auth.php';
