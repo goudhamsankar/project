@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\FeedbackController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('customer', CustomerController::class);
 
 });
+Route::post('feedback/store', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::get('feedback/view', [FeedbackController::class, 'view'])->name('feedback.view');
+
 Route::post('store', [CustomerController::class, 'store'])->name('customer.store');
 Route::get('check', [CustomerController::class, 'check'])->name('customer.check');
 Route::post('check-slote', [CustomerController::class, 'checkSlote'])->name('customer.checkSlote');
