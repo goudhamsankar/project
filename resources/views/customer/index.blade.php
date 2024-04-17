@@ -32,7 +32,7 @@
                 <div class="container">
                     <div class="slider_content">
                         <h3>Its Not Just a Haircut, Its an Experience.</h3>
-                        <h1>Where mens want <br>to look there very best.</h1>
+                        <h1>Where mens want <br>to look their very best.</h1>
                         <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality,
                             time and flawless look.</p>
                         <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
