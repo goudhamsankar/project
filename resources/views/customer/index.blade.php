@@ -132,13 +132,16 @@
                             </div>
                             <div class="col-md-6 padding-10">
                                 <input type="email" id="app_email" name="email" class="form-control"
-                                    placeholder="Your Email" required>
+        placeholder="Your Email" required>
+    @error('email')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 padding-10">
                                 <input type="text" id="app_phone" name="phone_no" class="form-control"
-                                    placeholder="Your Phone No" required>
+            placeholder="Your Phone No" required pattern="[0-9]{1,10}">
                             </div>
                             <div class="col-md-6 padding-10">
                                 <input type="time" id="app_free_time" name="time" class="form-control"
@@ -146,7 +149,7 @@
                             </div>
                             <div class="col-md-6 padding-10">
                                 <input type="date" id="app_free_date" name="date" class="form-control"
-                                    placeholder="Your Free day" required>
+                                min="{{ date('Y-m-d') }}" placeholder="Your Free day" required>
                             </div>
                         </div>
                         <div class="form-group row">
