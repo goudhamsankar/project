@@ -16,7 +16,7 @@
                     <div class="about_content align-center">
                         <h3 class="wow fadeInUp" data-wow-delay="100ms">Introducing</h3>
                         <h2 class="wow fadeInUp" data-wow-delay="200ms">The Salon@Door <br>Since 2023</h2>
-                        <img class="wow fadeInUp" data-wow-delay="500ms" src="img/about-logo.png" alt="logo">
+                        <img class="wow fadeInUp" data-wow-delay="500ms" src="img/about-logo3.png" alt="logo">
                         <p class="wow fadeInUp" data-wow-delay="600ms">Barber is a person whose occupation is mainly to
                             cut dress groom style and shave men's and boys' hair. A barber's place of work is known as a
                             "barbershop" or a "barber's". Barbershops are also places of social interaction and public
@@ -177,7 +177,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo.png" alt="Brand">
+                        <img class="mb-15" src="img/logo3.png" alt="Brand">
                         <p>Our salon service is created for men who appreciate premium quality, time and flawless look.
                         </p>
                         <ul class="widget_social">

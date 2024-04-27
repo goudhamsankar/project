@@ -529,7 +529,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo.png')}}" alt="Brand">
+                        <img class="mb-15" src="img/logo3.png" alt="Brand">
                         <p>Our barbershop is created for men who appreciate premium quality, time and flawless look. </p>
                         <ul class="widget_social">
                             <li><a href="#"><i class="social_facebook"></i></a></li>
